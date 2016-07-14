@@ -5,16 +5,20 @@
 ### How to Run
 
 - Clone project
+
 `git clone git@github.com:DanielZhu/react-write-finer-pages.git .`
 
 - Install the dependenies
+
 `cd react-write-finer-pages`
 `npm install`
 
 - Run the service
+
 `npm run start`
 
 - Visit Trello pages
+
 Open `http://0.0.0.0:3000/trello` to visit the demo
 
 ### Trello Re-implementation

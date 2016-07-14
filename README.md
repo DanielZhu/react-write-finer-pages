@@ -10,8 +10,10 @@
 
 - Install the dependenies
 
-`cd react-write-finer-pages`
-`npm install`
+```
+cd react-write-finer-pages
+npm install
+```
 
 - Run the service
 

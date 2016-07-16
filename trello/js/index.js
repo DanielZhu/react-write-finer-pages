@@ -8,12 +8,13 @@ import {Router, Route, IndexRoute, Link, hashHistory} from 'react-router'
 import TrelloHeader from './components/header';
 import TrelloBoardBriefBox from './components/boardBriefBox';
 import TrelloCol from './components/col';
+import mockMyBoard from './mockMyBoard';
 
 class App extends React.Component {
   render() {
     return (
       <div className='trello-wrapper'>
-        <TrelloHeader />
+        <TrelloHeader userInfo={{avatar: mockMyBoard.avatarHash, fullName: mockMyBoard.fullName}}/>
         {this.props.children || "Something wrong"}
       </div>
     );

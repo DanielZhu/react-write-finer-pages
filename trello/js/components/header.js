@@ -18,17 +18,29 @@ export default class TrelloHeader extends Component {
     return (
       <div className='trello-header'>
         <div className='trello-left-toolbar'>
-          <div className='trello-btn trello-board'>Boards</div>
+          <div className='trello-btn trello-board'>
+            <img src='../../../res/icons/board.png' className='suffix-icon'></img>
+            <span className='label'>Boards</span>
+          </div>
           <div className='trello-search-bar'>
              <input type="text" />
           </div>
         </div>
         <Link to='/' className='trello-logo'>Trello</Link>
         <div className='trello-right-toolbar'>
-          <div className='trello-btn trello-btn-new'>+</div>
-          <div className='trello-btn trello-btn-account'>Mengdan Zhu</div>
-          <div className='trello-btn trello-btn-info'>i</div>
-          <div className='trello-btn trello-btn-notify'>Ring</div>
+          <div className='trello-icon-btn trello-btn-new'>
+            <img src='../../../res/icons/plus.png'></img>
+          </div>
+          <div className='trello-btn trello-btn-account'>
+            <img src={'https://trello-avatars.s3.amazonaws.com/'+this.props.userInfo.avatar+'/30.png'} className='avatar'></img>
+            {this.props.userInfo.fullName}
+          </div>
+          <div className='trello-icon-btn trello-btn-info'>
+            <img src='../../../res/icons/info.png'></img>
+          </div>
+          <div className='trello-icon-btn trello-btn-notify'>
+            <img src='../../../res/icons/ring.png'></img>
+          </div>
         </div>
       </div>
     );

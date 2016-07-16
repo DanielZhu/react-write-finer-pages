@@ -40,12 +40,13 @@ export default class TrelloBoardBriefList extends Component {
     let starredBoardList = this.findBoardsByIds(boardStarredIds);
 
     let boardListDom = starredBoardList.map((board) => {
+      board.starred = boardStarredIds.indexOf(board.id) !== -1;
       return (<TrelloBoardBrief data={board} key={board.id} externTeam='true' />);
     });
 
     boardBriefListCol.push(
       <div className='brief-list-section' key='starred'>
-        <h4 className='brief-list-section-title'>Starred Boards</h4>
+        <h4 className='brief-list-section-title starred-board'>Starred Boards</h4>
         <ul className='brief-list-section-content'>{boardListDom}</ul>
       </div>
     );
@@ -64,12 +65,15 @@ export default class TrelloBoardBriefList extends Component {
     let myBoardList = this.findBoardsByIds(myBoardIds);
 
     let myBoardListDom = myBoardList.map((board) => {
+      board.starred = boardStarredIds.indexOf(board.id) !== -1;
       return (<TrelloBoardBrief data={board} key={board.id} />);
     });
 
+    myBoardListDom.push(<TrelloBoardBrief addNew='true' key='board_add_new' />);
+
     boardBriefListCol.push(
-      <div className='brief-list-section' key='my_starred'>
-        <h4 className='brief-list-section-title'>My Boards</h4>
+      <div className='brief-list-section' key='board_starred'>
+        <h4 className='brief-list-section-title my-board'>My Boards</h4>
         <ul className='brief-list-section-content'>{myBoardListDom}</ul>
       </div>
     );
@@ -79,12 +83,28 @@ export default class TrelloBoardBriefList extends Component {
       let orgBoards = this.findBoardsByOrgId(org.id);
 
       let orgBoardList = orgBoards.map((board) => {
+        board.starred = boardStarredIds.indexOf(board.id) !== -1;
         return (<TrelloBoardBrief data={board} key={board.id} />);
       });
+      orgBoardList.push(<TrelloBoardBrief addNew='true' key='board_add_new' />);
 
       return (
         <div className='brief-list-section' key={org.id}>
-          <h4 className='brief-list-section-title'>{org.displayName}</h4>
+          <h4 className='brief-list-section-title organization-board'>
+            {org.displayName}
+            <div className='trello-icon-btn'>
+              <img src='../../../res/icons/board.png' className='suffix-icon'></img>
+              <span className='label'>Boards</span>
+            </div>
+            <div className='trello-icon-btn'>
+              <img src='../../../res/icons/peoples.png' className='suffix-icon'></img>
+              <span className='label'>Members</span>
+            </div>
+            <div className='trello-icon-btn'>
+              <img src='../../../res/icons/board.png' className='suffix-icon'></img>
+              <span className='label'>Setting</span>
+            </div>
+          </h4>
           <ul className='brief-list-section-content'>{orgBoardList}</ul>
         </div>
       );

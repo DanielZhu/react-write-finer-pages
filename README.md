@@ -21,7 +21,7 @@ npm install
 
 - Visit Trello pages
 
-Open `http://0.0.0.0:3000/trello` to visit the demo
+Open `http://0.0.0.0:3000/#/trello` to visit the demo
 
 ### Trello Re-implementation
 

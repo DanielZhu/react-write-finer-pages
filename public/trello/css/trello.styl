@@ -1,0 +1,31 @@
+$btnHeight = 30
+$primaryColor = #026aa7
+
+#trello-skeleton
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.trello-btn
+  position: relative
+  background-color: $primaryColor
+  color: #fff
+  font-weight: bolder
+  text-align: center
+  line-height: unit($btnHeight, px)
+  background: linear-gradient(to bottom,rgba(255,255,255,.3) 0,rgba(255,255,255,.2) 100%)
+  padding: 0 10px
+  border-radius: 3px
+  float: left
+  height: 30px
+.trello-icon-btn
+  @extends .trello-btn
+  min-width: 30px
+  height: 30px
+  padding: 0
+  img
+    position: relative
+    height: 80%
+    top: 10%
+    text-align: center

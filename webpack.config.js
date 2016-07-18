@@ -2,7 +2,7 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: getEntrySources([/*'./entry.js', */'./trello/js/index.js']),
+    entry: getEntrySources(['./entry.js']),
     output: {
         path: path.resolve(__dirname, 'build'),
         publicPath: 'http://0.0.0.0:8080/',

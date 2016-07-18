@@ -1,0 +1,52 @@
+.col-list, .col-list-addnew
+  background-color: #e2e4e6
+  width: 270px
+  padding-top: 8px
+  margin-right: 8px
+  display: inline-block
+  border-radius: 3px
+  vertical-align: top
+  .col-list-title
+    position: relative
+    width: 100%
+    min-height: 30px
+    font-weight: bold
+    font-size: 1.4rem
+    padding: 0 8px 8px
+  .col-list-cards
+    position: relative
+    height: auto
+    padding: 0 9px 0 8px
+    margin-right: 1px
+    max-height: calc(100vh - 160px)
+    color: #000
+    overflow-x: hidden
+    overflow-y: overlay
+    &::-webkit-scrollbar
+      width: 8px
+    &::-webkit-scrollbar-track
+      border-radius: 3px
+      background: #D6DADC
+      margin: 0
+    &::-webkit-scrollbar-thumb
+      background-color: #C4C9CC
+      border-radius: 3px
+  .col-list-cards-addnew
+    color: #8c8c8c
+    padding: 8px
+    cursor: pointer
+    border-bottom-left-radius: 3px
+    border-bottom-right-radius: 3px
+    &:hover
+      color: darken(#8c8c8c, 50%)
+      text-decoration: underline
+      background-color: darken(#e2e4e6, 10%)
+.col-list-addnew
+  background: rgba(0, 0, 0, .12)
+  color: rgba(255, 255, 255, .6)
+  cursor: pointer
+  transition: background .1s ease
+  &:hover
+    background: rgba(0, 0, 0, .3)
+  .col-list-title
+    font-weight: normal

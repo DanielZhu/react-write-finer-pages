@@ -8,14 +8,14 @@ import TrelloCol from './src/trello/components/Col/Col'
 import TrelloBoardBriefBox from './src/trello/components/BoardBriefBox/BoardBriefBox'
 
 import Spin from './src/components/Spin/Spin'
+import NotFound from './src/components/NotFound/NotFound'
 import App from './src/components/App/App'
 // import InstagramApp from './src/instagram/index'
-
 
 // redirectApp() {
   setTimeout(() => {
     window.location.href = '#/trello';
-  }, 1000);
+  }, 1500);
 // }
 render((
   <Router history={hashHistory}>
@@ -25,6 +25,7 @@ render((
         <IndexRoute component={TrelloBoardBriefBox} />
         <Route path='b/:shortlink/:name' component={TrelloCol} />
       </Route>
+      <Route path='*' component={NotFound} />
     </Route>
   </Router>
 ), document.getElementById('react-clone-app'));

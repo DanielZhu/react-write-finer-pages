@@ -1,6 +1,6 @@
 'use strict'
 
-import '../css/spin.styl'
+import './style.styl'
 
 import React from 'react'
 

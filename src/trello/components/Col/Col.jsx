@@ -1,13 +1,13 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/col.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'
 
-import TrelloColList from './colList';
-import mockBoardCol from '../mockBoardCol';
+import TrelloColList from '../ColList/colList';
+import mockBoardCol from '../../mocks/mockBoardCol';
 
 export default class TrelloCol extends Component {
   constructor(props) {

@@ -1,11 +1,11 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/board-brief-list.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'
-import TrelloBoardBrief from './boardBrief';
+import TrelloBoardBrief from '../BoardBrief/BoardBrief';
 
 export default class TrelloBoardBriefList extends Component {
   constructor(props) {
@@ -93,15 +93,15 @@ export default class TrelloBoardBriefList extends Component {
           <h4 className='brief-list-section-title organization-board'>
             {org.displayName}
             <div className='trello-icon-btn'>
-              <img src='public/res/icons/board.png' className='suffix-icon'></img>
+              <img src='src/assets/icons/board.png' className='suffix-icon'></img>
               <span className='label'>Boards</span>
             </div>
             <div className='trello-icon-btn'>
-              <img src='public/res/icons/peoples.png' className='suffix-icon'></img>
+              <img src='src/assets/icons/peoples.png' className='suffix-icon'></img>
               <span className='label'>Members</span>
             </div>
             <div className='trello-icon-btn'>
-              <img src='public/res/icons/board.png' className='suffix-icon'></img>
+              <img src='src/assets/icons/board.png' className='suffix-icon'></img>
               <span className='label'>Setting</span>
             </div>
           </h4>

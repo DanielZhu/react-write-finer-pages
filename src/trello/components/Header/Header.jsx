@@ -1,7 +1,7 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/header.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'
@@ -19,7 +19,7 @@ export default class TrelloHeader extends Component {
       <div className='trello-header'>
         <div className='trello-left-toolbar'>
           <div className='trello-btn trello-board'>
-            <img src='public/res/icons/board.png' className='suffix-icon'></img>
+            <img src='src/assets/icons/board.png' className='suffix-icon'></img>
             <span className='label'>Boards</span>
           </div>
           <div className='trello-search-bar'>
@@ -29,17 +29,17 @@ export default class TrelloHeader extends Component {
         <Link to='#/trello' className='trello-logo'>Trello</Link>
         <div className='trello-right-toolbar'>
           <div className='trello-icon-btn trello-btn-new'>
-            <img src='public/res/icons/plus.png'></img>
+            <img src='src/assets/icons/plus.png'></img>
           </div>
           <div className='trello-btn trello-btn-account'>
             <img src={'https://trello-avatars.s3.amazonaws.com/'+this.props.userInfo.avatar+'/30.png'} className='avatar'></img>
             {this.props.userInfo.fullName}
           </div>
           <div className='trello-icon-btn trello-btn-info'>
-            <img src='public/res/icons/info.png'></img>
+            <img src='src/assets/icons/info.png'></img>
           </div>
           <div className='trello-icon-btn trello-btn-notify'>
-            <img src='public/res/icons/ring.png'></img>
+            <img src='src/assets/icons/ring.png'></img>
           </div>
         </div>
       </div>

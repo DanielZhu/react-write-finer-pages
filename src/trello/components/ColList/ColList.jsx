@@ -1,13 +1,13 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/col-list.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'
 import {Router, Route, IndexRoute, Link, hashHistory} from 'react-router'
 
-import TrelloColListCard from './colListCard';
+import TrelloColListCard from '../ColListCard/ColListCard';
 
 export default class TrelloColList extends Component {
   constructor(props) {

@@ -1,13 +1,13 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/board-brief-box.styl'
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'
 
-import TrelloBoardBriefList from './boardBriefList'
-import mockMyBoard from '../mockMyBoard'
+import TrelloBoardBriefList from '../BoardBriefList/BoardBriefList'
+import mockMyBoard from '../../mocks/mockMyBoard'
 
 export default class TrelloBoardBriefBox extends Component {
   constructor(props) {

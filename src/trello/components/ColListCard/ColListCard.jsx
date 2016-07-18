@@ -1,7 +1,7 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/col-list-card.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'

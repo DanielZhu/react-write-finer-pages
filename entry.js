@@ -1,54 +1,26 @@
-import './public/css/app.styl';
-
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, IndexRoute, Link, hashHistory} from 'react-router'
+import {Router, Route, Redirect, IndexRoute, Link, hashHistory} from 'react-router'
 
 // Customized Components
-import TrelloAppSkeleton from './public/trello'
-import TrelloCol from './public/trello/js/components/col'
-import InstagramApp from './public/instagram/js/index'
-import Spin from './public/js/spin'
+import TrelloAppSkeleton from './src/trello/components/App/App'
+import TrelloCol from './src/trello/components/Col/Col'
+import TrelloBoardBriefBox from './src/trello/components/BoardBriefBox/BoardBriefBox'
 
-import TrelloBoardBriefBox from './public/trello/js/components/boardBriefBox'
+import Spin from './src/components/Spin/Spin'
+import App from './src/components/App/App'
+// import InstagramApp from './src/instagram/index'
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className='app-wrapper'>
-        {this.props.children || "Something wrong"}
-      </div>
-    );
-  }
-}
 
-class AppHome extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      list: [],
-      text: 'Loading'
-    };
-  }
-  redirectApp() {
-    setTimeout(() => {
-      window.location.href = '#/trello';
-    }, 1000);
-  }
-  render() {
-    this.redirectApp();
-    return (
-      <div className='app-container'>
-        <Spin text={this.state.text}></Spin>
-      </div>
-    );
-  }
-}
-
+// redirectApp() {
+  setTimeout(() => {
+    window.location.href = '#/trello';
+  }, 1000);
+// }
 render((
   <Router history={hashHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={AppHome} />
+      <IndexRoute component={Spin} />
       <Route path='trello' component={TrelloAppSkeleton} >
         <IndexRoute component={TrelloBoardBriefBox} />
         <Route path='b/:shortlink/:name' component={TrelloCol} />

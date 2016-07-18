@@ -1,7 +1,7 @@
 'use strict'
 
 // Import stylus files
-import '../../css/components/board-brief.styl';
+import './style.styl'
 
 // Import libs
 import React, {Component, PropTypes} from 'react'

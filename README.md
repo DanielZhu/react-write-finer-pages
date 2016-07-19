@@ -2,6 +2,8 @@
 
 > Rewrite finer web pages in ReactJS
 
+[Demo](http://danielzhu.github.io/react-write-finer-pages/#/trello)
+
 ### How to Run
 
 - Clone project

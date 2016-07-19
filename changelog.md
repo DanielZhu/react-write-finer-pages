@@ -1,3 +1,7 @@
+#### 16.07.18
+
+- Re-structured the project
+
 #### 16.07.14
 
 - Finish the [version 1](./trello) for [Trello](http://trello.com)

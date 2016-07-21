@@ -5,8 +5,9 @@ module.exports = {
   entry: getEntrySources(['./entry.js']),
   debug: true,
   output: {
-    path: path.resolve(__dirname, './build'),
-    publicPath: '/build/',
+    path: path.resolve(__dirname, 'build'),
+    // publicPath: '/build/',
+    publicPath: 'http://0.0.0.0:8080/',
     filename: 'bundle.js'
   },
   devtool: '#source-map',

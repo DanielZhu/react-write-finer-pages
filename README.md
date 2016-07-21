@@ -35,5 +35,14 @@ Open `http://0.0.0.0:3000/#/trello` to visit the demo
 
 <img width="680px" src="src/assets/previews/trello/board_detail.png">
 
+- Visit Instagram pages
+
+Open `http://0.0.0.0:3000/#/instagram` to visit the demo
+
+### Instagram Re-implementation
+
+#### Index Page
+
+<img width="680px" src="src/assets/previews/instagram/index.jpg">
 
 Copyright to @2016 [Staydan.com](http://staydan.com)

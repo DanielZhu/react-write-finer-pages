@@ -14,7 +14,8 @@ import TrelloBoardBriefBox from './src/trello/components/BoardBriefBox/BoardBrie
 
 // Instagram Components
 import InstagramAppSkeleton from './src/instagram/components/App/App'
-// import InstagramStream from './src/instagram/components/Stream/Stream'
+import InstagramStream from './src/instagram/components/Stream/Stream'
+import InstagramNotFound from './src/instagram/components/NotFound/NotFound'
 
 // redirectApp() {
   // setTimeout(() => {
@@ -31,6 +32,9 @@ render((
         <Route path='b/:shortlink/:name' component={TrelloCol} />
       </Route>
       <Route path='instagram' component={InstagramAppSkeleton} >
+        <IndexRoute component={InstagramStream} />
+        <Route path='explore' component={TrelloCol} />
+        <Route path='*' component={InstagramNotFound} />
       </Route>
       <Route path='*' component={NotFound} />
     </Route>
